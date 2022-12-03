@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="2.5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="2.5dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_cart_meal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sweets"
+            app:riv_border_color="@color/black"
+            app:riv_border_width="2dp"
+            app:riv_corner_radius="234dp"
+            app:riv_corner_radius_bottom_left="30dp"
+            app:riv_corner_radius_bottom_right="30dp"
+            app:riv_corner_radius_top_left="30dp"
+            app:riv_corner_radius_top_right="30dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/iv_cart_meal">
+
+            <TextView
+                android:id="@+id/tv_cart_meal_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="sssssadddddddddddddddddddd" />
+
+            <ImageView
+                android:id="@+id/iv_permanent"
+                android:layout_width="15dp"
+                android:layout_height="12dp"
+                android:layout_below="@id/tv_cart_meal_name"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/rupee_im" />
+
+            <TextView
+                android:id="@+id/tv_actual_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_cart_meal_name"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/iv_permanent"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="249" />
+
+            <Button
+                android:id="@+id/bt_forAdd"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_cart_meal_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/cart_meal_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_cart_meal_name"
+                android:layout_marginTop="20dp"
+                android:layout_toStartOf="@id/bt_forAdd"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="123" />
+
+            <Button
+                android:id="@+id/bt_forSub"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_cart_meal_name"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/cart_meal_quantity"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/iv_permanent1"
+                android:layout_width="15dp"
+                android:layout_height="11dp"
+                android:layout_below="@id/cart_meal_quantity"
+                android:layout_marginTop="16dp"
+                android:layout_toStartOf="@id/cart_meal_price"
+                android:fontFamily="@font/berkshire_swash"
+                android:src="@drawable/rupee_im" />
+
+            <TextView
+                android:id="@+id/cart_meal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cart_meal_quantity"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="345" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

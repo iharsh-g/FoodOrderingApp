@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="50dp"
+        android:layout_height="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/purple_500" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/view_bottom"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dinner"
+        app:riv_corner_radius_top_left="50dp"
+        app:riv_corner_radius_top_right="50dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_add_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_bottom_sheet"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/not_cart_added_button_bg"
+        android:fontFamily="baskerville"
+        android:text="Add To Cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/iv_delete_item"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/iv_bottom_sheet"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/not_cart_added_button_bg"
+        android:src="@drawable/ic_remove_cart"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_added_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_bottom_sheet"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/iv_delete_item"
+        android:background="@drawable/cart_added_button_bg"
+        android:fontFamily="baskerville"
+        android:text="Item Added in Cart"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

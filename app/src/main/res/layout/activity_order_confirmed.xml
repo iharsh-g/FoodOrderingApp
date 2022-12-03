@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activities.OrderConfirmed">
+
+        <RelativeLayout
+            android:id="@+id/Rl_center"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/waiting" />
+
+            <TextView
+                android:id="@+id/sit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lottie1"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/berkshire_swash"
+                android:text="Please Wait..."
+                android:textColor="@color/purple_500"
+                android:textSize="28sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/confirm" />
+
+        <TextView
+            android:id="@+id/order_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lottie"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-60dp"
+            android:fontFamily="@font/berkshire_swash"
+            android:text="Order Received"
+            android:textColor="#08B83B"
+            android:textSize="28sp"
+            android:visibility="gone" />
+
+        <!-- ***********************************Invisible *********************   -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Cv"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_below="@id/order_rec"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#DADADA"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_permanent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="cursive"
+                    android:text="Order Summary"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_permanent"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="#949595" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_below="@+id/tv_permanent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_permanent2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Total Amount"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_permanent"
+                    android:layout_width="15dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="26dp"
+                    android:layout_toLeftOf="@id/tv_amount_summary"
+                    android:src="@drawable/rupee_im" />
+
+                <TextView
+                    android:id="@+id/tv_amount_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="1310" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

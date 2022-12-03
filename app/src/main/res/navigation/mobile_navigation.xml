@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.android.example.myfoodapp.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"
+        />
+
+    <fragment
+        android:id="@+id/nav_daily_meal"
+        android:name="com.android.example.myfoodapp.fragments.DailyMealFragment"
+        android:label="Daily Meal"
+        tools:layout="@layout/fragment_daily_meal" />
+
+    <fragment
+        android:id="@+id/nav_fav"
+        android:name="com.android.example.myfoodapp.fragments.FavouriteFragment"
+        android:label="Favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+    <fragment
+        android:id="@+id/nav_my_cart"
+        android:name="com.android.example.myfoodapp.fragments.MyCartFragment"
+        android:label="My Cart"
+        tools:layout="@layout/fragment_my_cart" />
+
+    <fragment
+        android:id="@+id/nav_order_history"
+        android:name="com.android.example.myfoodapp.fragments.OrderHistoryFragment"
+        android:label="Order History"
+        tools:layout="@layout/fragment_order_history"/>
+</navigation>
